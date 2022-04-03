@@ -36,13 +36,8 @@ public class CsvLoader
                 }
             }
         }
-        foreach (var results in _agg.Result)
-        {
-            foreach (var str in results)
-            {
-                Console.WriteLine($"runing all parsers result:{ str}");
-            }
-        }
+        
+        return _agg.Result;
 
         void ParseRecord(string[] columns,IEnumerable<ICSVParser> parsers)
         {
